@@ -4,7 +4,8 @@ exports.result_validator = (req, res, next) => {
   const result = validationResult(req);
   const hasErrors = !result.isEmpty();
 
-  if (hasErrors) {
+  if (hasErrors) 
+  {
     const errorList = result.array()?.map((obj) => {
       return obj.msg;
     });
